@@ -26,23 +26,20 @@
             </button>
             <a class="navbar-brand" href="#"><img src="styles/images/logo.png" alt="logo"></a>
         </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Help</a></li>
+        <div>
+            <ul class="nav-header pull-right">
+                <li><a href="#"><img src="styles/images/notify.jpg"></a></li>
+                <li><a href="#"><img src="styles/images/messages.jpg"></a></li>
+                <li><a href="#"><img src="styles/images/korobki.jpg"></a></li>
+                <li><a href="#"><img src="styles/images/bob_nilson.jpg"> Bob Nilson</a> </li>
             </ul>
-            <form class="navbar-form navbar-right">
-                <input type="text" class="form-control" placeholder="Search...">
-            </form>
         </div>
     </div>
 </div>
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-lg-2 col-sm-3 col-md-2 left-sidebar collapse " id="left-panel">
+        <div class="col-lg-2 col-sm-2 col-md-2 left-sidebar collapse " id="left-panel">
             <ul class="nav nav-sidebar">
                 <li class="sidebar-toggler-wrapper">
                     <div class="sidebar-toggler hidden-phone"></div>
@@ -51,7 +48,7 @@
                     <div class="search-box">
                         <form class="sidebar-form-search" METHOD="post">
                             <input class="search-input" type="text" placeholder="Search...">
-                            <input type="button" class="submit pull-right" value=" ">
+                            <input type="button" class="submit pull-right" id="search-pic" value=" ">
                         </form>
                     </div>
                 </li>
@@ -93,162 +90,526 @@
                 <!--<li><a href="">Another nav item</a></li>-->
             <!--</ul>-->
         </div>
-        <div class="col-lg-7 col-sm-6 col-sm-offset-3 col-md-7 col-md-offset-2 main">
-            <h1 class="page-header">Dashboard</h1>
+        <div class="col-lg-6 col-sm-6 col-sm-offset-2 col-md-7 col-md-offset-2 col-lg-offset-2 main">
+            <div class="content">
+                <div id="mail-layer" class="layers row">
+                    <h1>Input/Output</h1>
+                    <div class="address-box">
+                        <img src="styles/images/home.png" alt="home">
+                        <span>Home</span>
+                        <img src="styles/images/arrow-right.png" alt="">
+                    </div>
+                    <div class="type-box">
+                        <div class="inbox-box">Inbox(3)</div>
+                        <div class="outbox-box">Outbox</div>
+                    </div>
+                        <div class="mail-table-header custom-select">
+                            <div class="left-part">
+                                <div class="mail-box-header-left-box">
+                                    <input type="checkbox">
+                                </div>
+                                <select>
+                                    <option selected>Accept/Decline</option>
+                                    <option>Accept</option>
+                                    <option>Decline</option>
+                                </select>
+                            </div>
+                            <div class="pull-right">
+                                <div class="mail-box-header-right-box">
+                                    <span id="right-span">1-30 of 789</span>
+                                    <a href="javascript:void(0)"><img src="styles/images/arrow-mail-left.png" alt=""></a>
+                                    <a href="javascript:void(0)"><img src="styles/images/arrow-mail-right.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="check-mail">
+                                        <input type="checkbox">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="check-mail-star">
+                                        <input type="checkbox" name="check_1" id="check_1" class="css-checkbox">
+                                        <label for="check_1" class="css-label"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-mail">
+                                        <span>New server for data-center needed</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="mail-attach pull-right">
+                                        <img src="styles/images/clip.png" alt="Attached">
+                                    </div>
+                                </td>
+                                <td class="mail-time">
+                                    <span>16:30 PM</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="check-mail">
+                                        <input type="checkbox">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="check-mail-star">
+                                        <input type="checkbox" name="check_2" id="check_2" class="css-checkbox">
+                                        <label for="check_2" class="css-label"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-mail">
+                                        <span>New server for data-center needed</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="mail-attach pull-right">
+                                        <img src="styles/images/clip.png" alt="Attached">
+                                    </div>
+                                </td>
+                                <td class="mail-time">
+                                    <span>16:30 PM</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="check-mail">
+                                        <input type="checkbox">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="check-mail-star">
+                                        <input type="checkbox" name="check_3" id="check_3" class="css-checkbox">
+                                        <label for="check_3" class="css-label"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-mail">
+                                        <span>New server for data-center needed</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="mail-attach pull-right">
+                                        <img src="styles/images/clip.png" alt="Attached">
+                                    </div>
+                                </td>
+                                <td class="mail-time">
+                                    <span>16:30 PM</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="check-mail">
+                                        <input type="checkbox">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="check-mail-star">
+                                        <input type="checkbox" name="check_5" id="check_5" class="css-checkbox">
+                                        <label for="check_5" class="css-label"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-mail">
+                                        <span>New server for data-center needed</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="mail-attach pull-right">
+                                        <img src="styles/images/clip.png" alt="Attached">
+                                    </div>
+                                </td>
+                                <td class="mail-time">
+                                    <span>16:30 PM</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="check-mail">
+                                        <input type="checkbox">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="check-mail-star">
+                                        <input type="checkbox" name="check_6" id="check_6" class="css-checkbox">
+                                        <label for="check_6" class="css-label"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-mail">
+                                        <span>New server for data-center needed</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="mail-attach pull-right">
+                                        <img src="styles/images/clip.png" alt="Attached">
+                                    </div>
+                                </td>
+                                <td class="mail-time">
+                                    <span>16:30 PM</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="check-mail">
+                                        <input type="checkbox">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="check-mail-star">
+                                        <input type="checkbox" name="check_7" id="check_7" class="css-checkbox">
+                                        <label for="check_7" class="css-label"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-mail">
+                                        <span>Dolor sit amet, consectetuer adipiscing</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="mail-attach pull-right">
+                                        <img src="styles/images/clip.png" alt="Attached">
+                                    </div>
+                                </td>
+                                <td class="mail-time">
+                                    <span>16:30 PM</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="check-mail">
+                                        <input type="checkbox">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="check-mail-star">
+                                        <input type="checkbox" name="check_8" id="check_8" class="css-checkbox">
+                                        <label for="check_8" class="css-label"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-mail">
+                                        <span>New server for data-center needed</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="mail-attach pull-right">
+                                        <img src="styles/images/clip.png" alt="Attached">
+                                    </div>
+                                </td>
+                                <td class="mail-time">
+                                    <span>16:30 PM</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="check-mail">
+                                        <input type="checkbox">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="check-mail-star">
+                                        <input type="checkbox" name="check_4" id="check_4" class="css-checkbox">
+                                        <label for="check_4" class="css-label"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-mail">
+                                        <span>Dolor sit amet, consectetuer adipiscing</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="mail-attach pull-right">
+                                        <img src="styles/images/clip.png" alt="Attached">
+                                    </div>
+                                </td>
+                                <td class="mail-time">
+                                    <span>16:30 PM</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="check-mail">
+                                        <input type="checkbox">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="check-mail-star">
+                                        <input type="checkbox" name="check_9" id="check_9" class="css-checkbox">
+                                        <label for="check_9" class="css-label"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-mail">
+                                        <span>New server for data-center needed</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="mail-attach pull-right">
+                                        <img src="styles/images/clip.png" alt="Attached">
+                                    </div>
+                                </td>
+                                <td class="mail-time">
+                                    <span>16:30 PM</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="check-mail">
+                                        <input type="checkbox">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="check-mail-star">
+                                        <input type="checkbox" name="check_10" id="check_10" class="css-checkbox">
+                                        <label for="check_10" class="css-label"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-mail">
+                                        <span>Dolor sit amet, consectetuer adipiscing</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="mail-attach pull-right">
+                                        <img src="styles/images/clip.png" alt="Attached">
+                                    </div>
+                                </td>
+                                <td class="mail-time">
+                                    <span>16:30 PM</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 20px">
+                                    <div class="check-mail">
+                                        <input type="checkbox">
+                                    </div>
+                                </td>
+                                <td style="width: 30px;">
+                                    <div class="check-mail-star">
+                                        <input type="checkbox" name="check_11" id="check_11" class="css-checkbox">
+                                        <label for="check_11" class="css-label"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-mail">
+                                        <span>New server for data-center needed</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="mail-attach pull-right">
+                                        <img src="styles/images/clip.png" alt="Attached">
+                                    </div>
+                                </td>
+                                <td class="mail-time">
+                                    <span>16:30 PM</span>
+                                </td>
+                            </tr>
 
-            <div class="row placeholders">
-                <div class="col-xs-6 col-sm-3 placeholder">
-                    <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
-                    <h4>Label</h4>
-                    <span class="text-muted">Something else</span>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="col-xs-6 col-sm-3 placeholder">
-                    <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
-                    <h4>Label</h4>
-                    <span class="text-muted">Something else</span>
-                </div>
-                <div class="col-xs-6 col-sm-3 placeholder">
-                    <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
-                    <h4>Label</h4>
-                    <span class="text-muted">Something else</span>
-                </div>
-                <div class="col-xs-6 col-sm-3 placeholder">
-                    <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
-                    <h4>Label</h4>
-                    <span class="text-muted">Something else</span>
-                </div>
-            </div>
+                <div id="calendar-layer" class="layers">
+                    <h1>Calendar</h1>
+                    <div class="address-box">
+                        <img src="styles/images/home.png" alt="">
+                        <span>Home</span>
+                        <img src="styles/images/arrow-right.png" alt="">
+                    </div>
+                    <div class="calendar-box">
+                        <div class="calendar-toggle">
+                            <div>
+                                <div id="week_day">week day</div>
+                                <div id="month">month</div>
+                                <div id="today">today</div>
+                            </div>
+                            <br>
+                            <br>
+                        </div>
+                        <div class="calendar-table">
+                            <table >
+                                <tr id="table-header" >
+                                    <td>SUN</td>
+                                    <td>MON</td>
+                                    <td>TUE</td>
+                                    <td>WED</td>
+                                    <td>THU</td>
+                                    <td>FRI</td>
+                                    <td>SAT</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="table_text blind_text">27</span></td>
+                                    <td><span class="table_text blind_text">28</span></td>
+                                    <td><span class="table_text blind_text">29</span></td>
+                                    <td><span class="table_text blind_text">30</span></td>
+                                    <td><span class="table_text blind_text">31</span></td>
+                                    <td>
+                                        <span class="table_text">1</span>
+                                        <br>
+                                        <div id="fri_1">All day<p>Event</div>
+                                    </td>
+                                    <td><span class="table_text ">2</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="table_text ">3</span></td>
+                                    <td><span class="table_text ">4</span></td>
+                                    <td><span class="table_text ">5</span></td>
+                                    <td><span class="table_text ">6</span></td>
+                                    <td><span class="table_text ">7</span></td>
+                                    <td><span class="table_text ">8</span></td>
+                                    <td><span class="table_text ">9</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="table_text ">10</span>
+                                        <br>
+                                        <div id="long_day"><span>Long Event</span></div>
+                                    </td>
+                                    <td><span class="table_text ">11</span></td>
+                                    <td><span class="table_text ">12</span></td>
+                                    <td><span class="table_text ">13</span></td>
+                                    <td><span class="table_text ">14</span></td>
+                                    <td>
+                                        <span class="table_text ">15</span>
+                                        <br>
+                                        <div id="fri_15_1">10:30a<p>Meeting</div>
+                                        <div id="fri_15_2">12p<p>Lunch</div>
+                                    </td>
+                                    <td>
+                                        <span class="table_text ">16</span>
+                                        <br>
+                                        <div id="sun_16">7p<p>Birthday<p>Party</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span class="table_text ">17</span></td>
+                                    <td><span class="table_text ">18</span></td>
+                                    <td>
+                                        <span class="table_text ">19</span>
+                                        <br>
+                                        <div id="tue_19">4p<p>Repeating<p>Event</div>
+                                    </td>
+                                    <td><span class="table_text ">20</span></td>
+                                    <td><span class="table_text ">21</span></td>
+                                    <td><span class="table_text ">22</span></td>
+                                    <td><span class="table_text ">23</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="table_text ">24</span></td>
+                                    <td><span class="table_text ">25</span></td>
+                                    <td><span class="table_text ">26</span></td>
+                                    <td><span class="table_text ">27</span></td>
+                                    <td>
+                                        <span class="table_text ">28</span>
+                                        <br>
+                                        <div id="click4google"><span>Click fo Google</span></div>
+                                    </td>
+                                    <td><span class="table_text ">29</span></td>
+                                    <td><span class="table_text ">30</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="table_text blind_text">1</span></td>
+                                    <td><span class="table_text blind_text">2</span></td>
+                                    <td><span class="table_text blind_text">3</span></td>
+                                    <td><span class="table_text blind_text">4</span></td>
+                                    <td><span class="table_text blind_text">5</span></td>
+                                    <td><span class="table_text blind_text">6</span></td>
+                                    <td><span class="table_text blind_text">7</span></td>
+                                </tr>
 
-            <h2 class="sub-header">Section title</h2>
-            <div class="table-responsive">
-                <table class="table table-striped">
-                    <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Header</th>
-                        <th>Header</th>
-                        <th>Header</th>
-                        <th>Header</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>1,001</td>
-                        <td>Lorem</td>
-                        <td>ipsum</td>
-                        <td>dolor</td>
-                        <td>sit</td>
-                    </tr>
-                    <tr>
-                        <td>1,002</td>
-                        <td>amet</td>
-                        <td>consectetur</td>
-                        <td>adipiscing</td>
-                        <td>elit</td>
-                    </tr>
-                    <tr>
-                        <td>1,003</td>
-                        <td>Integer</td>
-                        <td>nec</td>
-                        <td>odio</td>
-                        <td>Praesent</td>
-                    </tr>
-                    <tr>
-                        <td>1,003</td>
-                        <td>libero</td>
-                        <td>Sed</td>
-                        <td>cursus</td>
-                        <td>ante</td>
-                    </tr>
-                    <tr>
-                        <td>1,004</td>
-                        <td>dapibus</td>
-                        <td>diam</td>
-                        <td>Sed</td>
-                        <td>nisi</td>
-                    </tr>
-                    <tr>
-                        <td>1,005</td>
-                        <td>Nulla</td>
-                        <td>quis</td>
-                        <td>sem</td>
-                        <td>at</td>
-                    </tr>
-                    <tr>
-                        <td>1,006</td>
-                        <td>nibh</td>
-                        <td>elementum</td>
-                        <td>imperdiet</td>
-                        <td>Duis</td>
-                    </tr>
-                    <tr>
-                        <td>1,007</td>
-                        <td>sagittis</td>
-                        <td>ipsum</td>
-                        <td>Praesent</td>
-                        <td>mauris</td>
-                    </tr>
-                    <tr>
-                        <td>1,008</td>
-                        <td>Fusce</td>
-                        <td>nec</td>
-                        <td>tellus</td>
-                        <td>sed</td>
-                    </tr>
-                    <tr>
-                        <td>1,009</td>
-                        <td>augue</td>
-                        <td>semper</td>
-                        <td>porta</td>
-                        <td>Mauris</td>
-                    </tr>
-                    <tr>
-                        <td>1,010</td>
-                        <td>massa</td>
-                        <td>Vestibulum</td>
-                        <td>lacinia</td>
-                        <td>arcu</td>
-                    </tr>
-                    <tr>
-                        <td>1,011</td>
-                        <td>eget</td>
-                        <td>nulla</td>
-                        <td>Class</td>
-                        <td>aptent</td>
-                    </tr>
-                    <tr>
-                        <td>1,012</td>
-                        <td>taciti</td>
-                        <td>sociosqu</td>
-                        <td>ad</td>
-                        <td>litora</td>
-                    </tr>
-                    <tr>
-                        <td>1,013</td>
-                        <td>torquent</td>
-                        <td>per</td>
-                        <td>conubia</td>
-                        <td>nostra</td>
-                    </tr>
-                    <tr>
-                        <td>1,014</td>
-                        <td>per</td>
-                        <td>inceptos</td>
-                        <td>himenaeos</td>
-                        <td>Curabitur</td>
-                    </tr>
-                    <tr>
-                        <td>1,015</td>
-                        <td>sodales</td>
-                        <td>ligula</td>
-                        <td>in</td>
-                        <td>libero</td>
-                    </tr>
-                    </tbody>
-                </table>
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="tasks-layer" class="layers">
+                    <h1>Tasks</h1>
+                    <div class="address-box">
+                        <img src="styles/images/home.png" alt="">
+                        <span>Home</span>
+                        <img src="styles/images/arrow-right.png" alt="">
+                    </div>
+                    <div class="task-box">
+                        <div class="task-box-header">
+                            <div><span>Best Moments</span></div>
+                            <div class="task-box-header-right"><img src="styles/images/settings.png" alt=""></div>
+                        </div>
+                        <div class="task-box-content">
+                            <div>
+                                <div class="task-box-line">
+                                    <div><input type="checkbox"></div>
+                                    <div><span>Some text</span></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="task-box-line">
+                                    <div><input type="checkbox"></div>
+                                    <div><span>Some text</span></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="task-box-line">
+                                    <div><input type="checkbox"></div>
+                                    <div><span>Some text</span></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="task-box-line">
+                                    <div><input type="checkbox"></div>
+                                    <div><span>Some text</span></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="task-box-line">
+                                    <div><input type="checkbox"></div>
+                                    <div><span>Some text</span></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="task-box-line">
+                                    <div><input type="checkbox"></div>
+                                    <div><span>Some text</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="add-task-panel">
+                            <div id="task_input">
+                                <div>
+                                    <input type="text">
+                                </div>
+                                <div>
+                                    <div>
+                                        <img src="styles/images/next-btn.png" alt="next">
+                                        <p></p>
+                                        <img src="styles/images/previous.png" alt="prev">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="task-buttons">
+                                <div>
+                                    <button class="task-btn-red task-btn">Add task</button>
+                                    <button id="hide_add_task_panel" class="task-btn-cancel task-btn">Cancel</button>
+                                </div>
+                                <div>
+                                    <img src="styles/images/alarm-clock.png" alt="alarm-clock">
+                                    <img src="styles/images/flag.png" alt="flag">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="task-add">
+                            <div><button id="show_add_task_panel" class="task-btn-add task-btn">Add task</button> </div>
+                            <div><img src="styles/images/repeat.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-lg-3 col-sm-3 col-md-3">
+        <div class="col-lg-4 col-sm-4 col-md-3">
             <div class="grey_fill"></div>
         </div>
     </div>

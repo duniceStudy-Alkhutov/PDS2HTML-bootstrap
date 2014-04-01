@@ -42,4 +42,10 @@ $(document).ready(function(){
         $('#send-msg').val('');
         return false;
     });
+    $("#hide_add_task_panel").click(function(){
+        $("#add-task-panel").hide();
+    });
+    $("#show_add_task_panel").click(function(){
+        $("#add-task-panel").show();
+    });
 });
