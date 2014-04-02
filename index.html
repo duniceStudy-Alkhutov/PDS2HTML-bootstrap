@@ -610,7 +610,83 @@
             </div>
         </div>
         <div class="col-lg-4 col-sm-4 col-md-3">
-            <div class="grey_fill"></div>
+            <div class="input-elements">
+                <div class="control-group">
+                    <label class="control-label" for="title">Title</label>
+                    <div class="controls">
+                        <input id="title" name="title" type="text" placeholder=":)" class="input-sm">
+                    </div>
+                </div>
+            </div>
+            <div id="features-area">
+                <div id="todo">
+                    <div id="list-box">
+                        <div class="todo-line">
+                            <div><input type="checkbox"></div>
+                            <div><label>task 1</label></div>
+                        </div>
+                        <div class="todo-line">
+                            <div><input type="checkbox"></div>
+                            <div><label>task 2</label></div>
+                        </div>
+                    </div>
+                    <div id="add2list-box">
+                        <form id="add_form" >
+                            <div>
+                                <img src="styles/images/add-task.png" alt="add-task">
+                            </div>
+                            <div >
+                                <input type="text" id="add-input" placeholder="I should to...">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div id="notepad">
+                    <img src="styles/images/enlarge.png" alt="Large notepad" id="enlarge">
+                    <div contenteditable="true" id="notepad-content">
+                        <p>You can write here!</p>
+                    </div>
+                </div>
+                <div id="chat">
+                    <div id="chat-text-box">
+                        <div class="iamauthor row" >
+                            <div class="chat-photo-left col-md-2 col-sm-2 col-xs-1">
+                                <img src="styles/images/bob-nilson-big.png" alt="bob">
+                            </div>
+                            <div class="col-md-10 col-sm-10 col-xs-11 pull-right">
+                                <div class="chat-text-left ">
+                                    <span><span class="blue_span">Bob Nilson</span> at Jul 25, 2012 11:09</span>
+                                    <div><p>aaaaaaaaaaasssaa<p>
+                                        asdasdasddddddddddd<p>
+                                        asdasdasdasdasdasda<p>ddddddddddddddd
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="interlocutor row">
+                            <div class="col-md-10 col-sm-10 col-xs-11">
+                                <div class="chat-text-right">
+                                    <span><span class="blue_span">Richard Doe</span> at Jul 25, 2012 11:10</span>
+                                    <div>
+                                        <p>aaaaaaaaaaasssaa<p>
+                                        <!--asdasdasddddddddddd<p>-->
+                                        <!--asdasdasdasdasdasda-->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat-photo-right col-md-2 col-sm-2 col-xs-1 pull-right">
+                                <img src="styles/images/richard-doe.png" alt="richard">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="send-msg-box">
+                        <form id="send-form">
+                            <div><input type="text" id="send-msg"></div>
+                            <div><input type="submit" id="submit-msg" value=" "></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
