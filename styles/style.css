@@ -2,7 +2,18 @@
     height: 600px;
     background: #dedede;
 }
+body {
+    padding-top: 50px;
+}
+
 /**********  HEADER  **********/
+.sub-header {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+.navbar-fixed-top {
+    border: 0;
+}
 .nav-header {
     margin-top: 5px;
 }
@@ -110,6 +121,10 @@
     line-height: 35px;
     padding: 0 20px 0 0px;
     display: block;
+    padding-left: 40px;
+}
+.nav-sidebar li ul{
+    padding-left: 0;
 }
 .nav-sidebar ul{
     display: none;
@@ -267,7 +282,7 @@ li.active div:after{
     display: inline-block;
     vertical-align: middle;
     margin: 0 auto;
-    width: 48%;
+    /*width: 45%;*/
 }
 .left-part{
     margin-top: 3px !important;
@@ -296,7 +311,7 @@ li.active div:after{
     font-size: 14px;
     font-weight: bold;
     color: #969696;
-    padding-right: 5px;
+    /*padding-right: 5px;*/
     vertical-align: middle;
 }
 #right-span{
@@ -349,7 +364,10 @@ label.css-label {
     text-align: right;
     padding-right: 5px;
 }
-
+.mail-unread{
+    color: #303030;
+    font-weight: bold;
+}
 /********* CALENDAR *********/
 #calendar-layer{
     display: none;
@@ -431,16 +449,11 @@ label.css-label {
 #long_day{
     background: #2dab41;
     position: absolute;
-    min-width: 325px;
-    width: 25.6%;
-    max-width: 345px;
 }
 #click4google{
     background: #ffb939;
     position: absolute;
-    min-width: 150px;
-    width: 16%;
-    max-width: 170px;
+    height: auto;
 }
 /************    TASK LAYOUT   ***********/
 #tasks-layer{
@@ -475,7 +488,7 @@ label.css-label {
 #task_input>div:nth-child(2){
 }
 #task_input>div:nth-child(2) div{
-    height: 34px;
+    height: 38px;
     vertical-align: middle;
 }
 #task_input div>img {
@@ -533,8 +546,8 @@ label.css-label {
     margin-right: 0;
 }
 #task-buttons>div:nth-child(2)>img{
-    height: 15px;
-    padding: 10px 5px 0 5px;
+    height: 25px;
+    padding: 10px 0px 0 10px;
 
 }
 .task-btn-red {
@@ -598,6 +611,10 @@ label.css-label {
 }
 #task-add>div:nth-child(2) img{
     height: 15px;
+}
+#task-p{
+    line-height: 1.4;
+    margin: 0 0 -5px;
 }
 /************    RIGHT PANEL   ***********/
 /************   FEATURES AREA   **********/
@@ -789,6 +806,7 @@ label.css-label {
 .chat-photo-left img{
     position: absolute;
     margin: auto;
+    /*margin-right: 15px;*/
     top: 0;
     left: 0;
     right: 0;
