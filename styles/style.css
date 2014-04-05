@@ -666,9 +666,50 @@ label.css-label {
     padding: 10px 20px;
     margin: 0 20px;
 }
-#features-area{
-
+.input-elements{
+    margin-top: 20px;
 }
+.input-elements div:first-child{
+    text-align: right;
+    padding-right: 0;
+}
+
+#control-table{
+    border-spacing: 10px;
+    border-collapse: separate;
+}
+#control-table tr td:first-child{
+    text-align: right;
+}
+#control-table tr td:last-child div{
+    display: inline;
+}
+#title{
+    width: 100%;
+    padding-left: 5px;
+}
+#label-priority{
+    font-weight: normal;
+}
+#gmaps-field{
+    border: 1px solid #e5e5e5;
+    overflow: hidden;
+}
+.width-full{
+    width: 100%;
+}
+.width-85{
+    width: 85%;
+}
+.datepiker{
+    height: 25px;
+    background: url("images/calendar-custom.png") no-repeat right transparent;
+    overflow: hidden;
+    border: 1px solid #eeeeee;
+}
+#features-area{
+}
+
 #todo{
     border: 1px solid #969696;
     -webkit-box-shadow: 0 0 5px 0 rgba(50, 50, 50, 1);
@@ -953,10 +994,10 @@ label.css-label {
     outline: none;
 }
 /*Clearing Floats*/
-.cf:before, .cf:after{
-    content:"";
-    display:table;
-}
+/*.cf:before, .cf:after{*/
+    /*content:"";*/
+    /*display:table;*/
+/*}*/
 
 .cf:after{
     clear:both;
@@ -1001,7 +1042,7 @@ label.css-label {
     padding: 0;
     cursor: pointer;
     height: 30px;
-    width: 110px;
+    width: 95px;
     color: #444;
     /* text-transform: uppercase; */
     background: #e5e5e5;

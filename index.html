@@ -8,6 +8,7 @@
     <meta name="author" content="">
     <title>Dashboard Template for Bootstrap</title>
     <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="styles/datepicker.css" rel="stylesheet">
     <link href="styles/dashboard.css" rel="stylesheet">
     <link href="styles/style.css" rel="stylesheet">
 </head>
@@ -90,7 +91,7 @@
                 <!--<li><a href="">Another nav item</a></li>-->
             <!--</ul>-->
         </div>
-        <div class="col-lg-6 col-sm-6 col-sm-offset-2 col-md-7 col-md-offset-2 col-lg-offset-2 main">
+        <div class="col-lg-6 col-sm-6 col-sm-offset-2 col-md-6 col-md-offset-2 col-lg-offset-2 main">
             <div class="content">
                 <div id="mail-layer" class="layers row">
                     <h1>Input/Output</h1>
@@ -609,19 +610,115 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-sm-4 col-md-3">
-            <div class="input-elements">
-                <div class="control-group">
+        <div class="col-lg-4 col-sm-4 col-md-4">
+            <div class="input-elements row">
+                <div class="col-md-3 ">
+                    <label class="control-label" for="title">Title</label>
+                    <label class="control-label" for="title">List/Agenda</label>
+                    <label class="control-label" for="title">Assign to</label>
+                    <label class="control-label" for="title">Priority</label>
+                    <label class="control-label" for="title">Start</label>
+                    <label class="control-label" for="title">Stop</label>
+                    <label class="control-label" for="title">Reminder</label>
+                    <label class="control-label" for="title">Location</label>
+                    <label class="control-label" for="title">Estimate</label>
+                </div>
+                <div class="col-md-9">
+                    <div class="controls">
+                        <input id="title_" name="title" type="text" placeholder=":)" class="input-sm">
+                    </div>
+
+                </div>
+                <!--<div class="control-group">
                     <label class="control-label" for="title">Title</label>
                     <div class="controls">
                         <input id="title" name="title" type="text" placeholder=":)" class="input-sm">
                     </div>
                     <br>
-                    <form class="form-wrapper cf">
-                        <input type="text" placeholder="Search place..." id="gmaps-field">
-                        <button type="submit">Google Maps</button>
-                    </form>
-                </div>
+
+
+                </div>-->
+            </div>
+            <div>
+                <table cellspacing="10" cellpadding="10" id="control-table">
+                    <tr>
+                        <td style="text-align: right">Title</td>
+                        <td class="width-full">
+                            <div class="controls">
+                                <input id="title" name="title" type="text" placeholder=":)">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right">List/Agenta</td>
+                        <td>
+                            <div>
+                                <select id="">
+                                    <option value="1">option 1</option>
+                                    <option value="2">option 2</option>
+                                    <option value="3">option 3</option>
+                                </select>
+                            </div>
+                            <div >
+                                <form action="">
+                                    <input type="radio" name="box_2" value="tasks">Tasks
+                                    <input type="radio" name="box_2" value="meet">Meeting
+                                </form>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Assign to</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Priority</td>
+                        <td id="table-priority">
+                            <div>
+                                <select id="priority">
+                                    <option value="1">option 1</option>
+                                    <option value="2">option 2</option>
+                                    <option value="3">option 3</option>
+                                </select>
+                            </div>
+                            <label id="label-priority" for="status">Status</label>
+                            <div>
+                                <select id="status">
+                                    <option value="1">option 1</option>
+                                    <option value="2">option 2</option>
+                                    <option value="3">option 3</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Start</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Stop</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Reminder</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Location</td>
+                        <td class="width-full">
+                            <form class="form-wrapper cf">
+                                <input type="text" placeholder="Search place..." id="gmaps-field">
+                                <button type="submit">Google Maps</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Estimate</td>
+                        <td></td>
+                    </tr>
+
+                </table>
             </div>
             <div id="features-area">
                 <div id="todo">
@@ -713,6 +810,7 @@
 <script src="bower_components/underscore/underscore.js"></script>
 <script src="bower_components/json2/json2.js"></script>
 <script src="bower_components/backbone/backbone.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
 <script src="js/jquery-ui.js"></script>
 <script src="js/app.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
