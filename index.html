@@ -10,6 +10,7 @@
     <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <link href="styles/datepicker.css" rel="stylesheet">
     <link href="styles/dashboard.css" rel="stylesheet">
+    <link href="bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css">
     <link href="styles/style.css" rel="stylesheet">
 </head>
 
@@ -610,35 +611,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-sm-4 col-md-4">
-            <div class="input-elements row">
-                <div class="col-md-3 ">
-                    <label class="control-label" for="title">Title</label>
-                    <label class="control-label" for="title">List/Agenda</label>
-                    <label class="control-label" for="title">Assign to</label>
-                    <label class="control-label" for="title">Priority</label>
-                    <label class="control-label" for="title">Start</label>
-                    <label class="control-label" for="title">Stop</label>
-                    <label class="control-label" for="title">Reminder</label>
-                    <label class="control-label" for="title">Location</label>
-                    <label class="control-label" for="title">Estimate</label>
-                </div>
-                <div class="col-md-9">
-                    <div class="controls">
-                        <input id="title_" name="title" type="text" placeholder=":)" class="input-sm">
-                    </div>
-
-                </div>
-                <!--<div class="control-group">
-                    <label class="control-label" for="title">Title</label>
-                    <div class="controls">
-                        <input id="title" name="title" type="text" placeholder=":)" class="input-sm">
-                    </div>
-                    <br>
-
-
-                </div>-->
-            </div>
+        <div class="col-lg-4 col-sm-4 col-md-4 right-panel">
             <div>
                 <table cellspacing="10" cellpadding="10" id="control-table">
                     <tr>
@@ -650,33 +623,38 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="text-align: right">List/Agenta</td>
+                        <td>List/Agenta</td>
                         <td>
                             <div>
-                                <select id="">
+                                <select class="big-select">
                                     <option value="1">option 1</option>
                                     <option value="2">option 2</option>
                                     <option value="3">option 3</option>
                                 </select>
                             </div>
-                            <div >
-                                <form action="">
+                            <div>
+                                <form action="" id="radio-form">
                                     <input type="radio" name="box_2" value="tasks">Tasks
                                     <input type="radio" name="box_2" value="meet">Meeting
                                 </form>
                             </div>
-
                         </td>
                     </tr>
                     <tr>
                         <td>Assign to</td>
-                        <td></td>
+                        <td>
+                            <select id="simple-select" class="width-full">
+                                <option value="1">option 1</option>
+                                <option value="2">option 2</option>
+                                <option value="3">option 3</option>
+                            </select>
+                        </td>
                     </tr>
                     <tr>
                         <td>Priority</td>
                         <td id="table-priority">
                             <div>
-                                <select id="priority">
+                                <select id="priority" class="big-select">
                                     <option value="1">option 1</option>
                                     <option value="2">option 2</option>
                                     <option value="3">option 3</option>
@@ -684,7 +662,7 @@
                             </div>
                             <label id="label-priority" for="status">Status</label>
                             <div>
-                                <select id="status">
+                                <select id="status" class="big-select">
                                     <option value="1">option 1</option>
                                     <option value="2">option 2</option>
                                     <option value="3">option 3</option>
@@ -694,15 +672,33 @@
                     </tr>
                     <tr>
                         <td>Start</td>
-                        <td></td>
+                        <td class="date-inline">
+                            <div class='input-group date datetimepicker' id='datetimepicker1'>
+                                <input type='text' class="date-input-text" />
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </td>
                     </tr>
                     <tr>
                         <td>Stop</td>
-                        <td></td>
+                        <td class="date-inline">
+                            <div class='input-group date datetimepicker' id='datetimepicker2'>
+                                <input type='text' class="date-input-text" />
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </td>
                     </tr>
                     <tr>
                         <td>Reminder</td>
-                        <td></td>
+                        <td class="date-inline">
+                            <div class='input-group date datetimepicker' id='datetimepicker3'>
+                                <input type='text' class="date-input-text" />
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </td>
                     </tr>
                     <tr>
                         <td>Location</td>
@@ -715,9 +711,23 @@
                     </tr>
                     <tr>
                         <td>Estimate</td>
-                        <td></td>
+                        <td>
+                            <input class="width-30 timepicker">
+                            <label for="spend" id="spend-label">Spend</label>
+                            <input id="spend" class="width-30 timepicker">
+                        </td>
                     </tr>
-
+                    <tr>
+                        <td>Attach</td>
+                        <td>
+                            <div class="attach-custom">
+                                <form action="">
+                                    <input type="file" name="file" id="file" >
+                                    <label for="file">Select file</label>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
                 </table>
             </div>
             <div id="features-area">
@@ -757,7 +767,8 @@
                                     <img src="styles/images/bob-nilson-big.png" alt="bob">
                                 </div>
                             </div>
-                            <div class="col-md-10 col-sm-10 col-xs-10 col-lg-11 pull-right">
+                            <div class="col-md-10 col-md-offset-2 col-sm-10 col-sm-offset-2
+                             col-xs-10 col-xs-offset-2 col-lg-11 col-lg-offset-1 pull-right">
                                 <div class="chat-text-left ">
                                     <span><span class="blue_span">Bob Nilson</span> at Jul 25, 2012 11:09</span>
                                     <div><p>aaaaaaaaaaasssaa<p>
@@ -815,6 +826,9 @@
 <script src="js/app.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 <script src="js/googleMaps.js"></script>
+<script src="bower_components/moment/moment.js"></script>
+<script src="bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+
 <script src="js/my.js"></script>
 </body>
 </html>

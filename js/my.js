@@ -86,4 +86,14 @@ $(document).ready(function(){
     google.maps.event.addDomListener(window, 'load', initialize);
 
     $('#gmaps').draggable({'handle': '#gmaps-panel', cancel : '#gmaps-close'});
+
+    $(function () {
+        $('.datetimepicker').datetimepicker();
+        });
+    $(function(){
+        $('.timepicker').datetimepicker({
+            pickDate: false
+        });
+    });
+
 });
