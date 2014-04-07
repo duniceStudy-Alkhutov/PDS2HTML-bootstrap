@@ -209,6 +209,9 @@ li.active div:after{
 /**************************/
 /*******  MIDDLE  *********/
 /**************************/
+.content{
+    margin-top: 50px;
+}
 .content h1{
     margin: 10px;
 }
@@ -246,7 +249,7 @@ li.active div:after{
 }
 /********** MAIL *********/
 #mail-layer{
-    margin: 50px 0 0 0;
+    margin: 0px 0 0 0;
     width: 100%;
     display: none;
 }
@@ -371,7 +374,7 @@ label.css-label {
 /********* CALENDAR *********/
 #calendar-layer{
     display: none;
-    margin: 50px 0 0 0;
+    margin: 0px 0 0 0;
     width: 100%;
 }
 .calendar-box{
@@ -665,11 +668,11 @@ label.css-label {
 .right-panel{
     padding-left: 15px;
     padding-right: 10px;
-    margin-top: 50px;
+    margin-top: 00px;
 }
 @media (min-width: 786px) {
     .right-panel{
-        margin-top: 50px;
+        margin-top: 150px;
     }
 }
 .input-elements{
@@ -724,7 +727,7 @@ label.css-label {
     margin-left: -4px;
     border: 1px solid #dadada;
 }
-.datetimepicker{
+.date-time-picker{
     width: 100%;
     display: inline-block !important;
 }

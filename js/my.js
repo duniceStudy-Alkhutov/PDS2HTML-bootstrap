@@ -4,6 +4,7 @@
 
 $(document).ready(function(){
 //    initialize();
+    //function set width to long event in calendar
     var myFoo = function(elem, pos_1, pos_2){
         var totalWidth = 0;
         td = $('#cal-table td:has('+elem+')');
@@ -18,6 +19,12 @@ $(document).ready(function(){
     myFoo('#long_day', 0, 3);
     myFoo('#click4google', 4, 5);
 
+    $(window).resize(function(){
+        myFoo('#long_day', 0, 3);
+        myFoo('#click4google', 4, 5);
+    });
+
+    //show/hide items in left-sidebar
     $(".left-sidebar div").click(function(){
         //slide up all the link lists
         $(".left-sidebar ul ul").slideUp();
@@ -27,6 +34,8 @@ $(document).ready(function(){
             $(this).next().slideDown();
         }
     });
+
+    //add new item to TO DO list
     $('#add_form').submit(function () {
         if ($('#add-input').val() !== '') {
             var input_value = $('#add-input').val();
@@ -39,6 +48,8 @@ $(document).ready(function(){
         $('#add-input').val('');
         return false;
     });
+
+    //add new message to chat
     $('#send-form').submit(function(){
         if($('#send-msg').val() !== ''){
             var input_value = $('#send-msg').val();
@@ -60,18 +71,16 @@ $(document).ready(function(){
         $('#send-msg').val('');
         return false;
     });
+
+    //hide/show add panel in Task layer
     $("#hide_add_task_panel").click(function(){
         $("#add-task-panel").hide();
     });
     $("#show_add_task_panel").click(function(){
         $("#add-task-panel").show();
     });
-//know width 4th table elements for long task
-    $(window).resize(function(){
-        myFoo('#long_day', 0, 3);
-        myFoo('#click4google', 4, 5);
 
-    });
+    //Show Google-maps
     $('#gmaps-field, #gmaps-cancel').click(function(){
         $('#gmaps').toggleClass('invisible');
     });
@@ -85,15 +94,29 @@ $(document).ready(function(){
     }
     google.maps.event.addDomListener(window, 'load', initialize);
 
+    //drug-n-drop map layer
     $('#gmaps').draggable({'handle': '#gmaps-panel', cancel : '#gmaps-close'});
 
+    //datetimepicker
     $(function () {
-        $('.datetimepicker').datetimepicker();
+        $('.date-input-text').datetimepicker({
+            autoclose: 1,
+            format: 'yyyy MM dd - hh:ii'
         });
+    });
     $(function(){
         $('.timepicker').datetimepicker({
             pickDate: false
         });
     });
 
+    //show/hide large notepad
+    $('#enlarge').click(function(){
+        $('#ninja-notepad').fadeIn('slow');
+    });
+    $('#ninja-notepad').focusout(function(){
+        var new_text = $('#notepad-content_2').text();
+        $('#notepad-content').text(new_text);
+        $('#ninja-notepad').fadeOut();
+    });
 });
